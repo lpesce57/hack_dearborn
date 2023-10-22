@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITLE</title>
+</head>
+<body>
+    <a href = "#main" id="skip">Skip to Main content</a>
+    
+<!-- Navigation -->
+<div class="nav">
+<nav>
+    <ul>
+     <li><a href="index.html">Home</a></li>
+      <li><a href="my_diary.html">MyDiary</a></li>
+      <li><a href="daily_prompt.html">Daily Prompt</a></li>
+      <li><a href="food_log.html">Food Log</a></li>
+      <li><a href="not_alone.html">Learn More</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main id="main">
+<br><br><br>
+<h2 class="journal">9/21/23 Journal Entry</h2>
+<br>
+<textarea name="message" rows="30" cols="80">
+    Today has been so much fun! I woke up early and cooked some eggs and they turned out really well. Then I headed over to UM Dearborn to participate in my first Hackathon. It has been a lot of fun and I have really enjoyed expanding my ideas along the way. I can't wait to see what tomorrow brings me.
+  </textarea>
+
+  <br><br><br>
+
+  <h2>Mood Scale</h2>
+  <div id="rating">
+    <button class="button_class">1</button>
+    <button class="button_class">2</button>
+    <button class="button_class">3</button>
+    <button class="button_class">4</button>
+    <button class="button_class">5</button>
+    <button class="button_class">6</button>
+    <button class="button_class">7</button>
+    <button class="button_class">8</button>
+    <button class="button_class active_button">9</button>
+    <button class="button_class">10</button>
+  </div>
+  
+  <script>
+  var ratings = document.getElementById("rating");
+  var buttons = ratings.getElementsByClassName("button_class");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active_button");
+    current[0].className = current[0].className.replace(" active_button", "");
+    this.className += " active_button";
+    });
+  }
+  </script>
+  <br><br><br>
+  <h2>Productivity Tracker</h2>
+  <textarea name="message" rows="30" cols="80">
+    1. Made a lot of progress on my Hackathon project!
+    2. Beat a really hard level in Sudoku
+    3. Made myself eggs for breakfast
+  </textarea>
+  <br>
+</div>
+<div class="center">
+<a href="calendar.html">View More Past Entries</a>
+</div>
+<br><br><br>
+
+</main>
+<footer>Created By: Lauren Pesce</footer>
+</body>
